@@ -1,0 +1,26 @@
+/* Aim :WAp to find the factorial using iterative and recursive functions .
+   Name : Ansari Mohammad Muzammil Nisar Ahmad     Roll No: 29
+   Division : A        UIN : 241A035   Branch : AIDS
+*/
+#include<stdio.h>
+// Function to calculate factorial iteratively
+int factorialIterative(int num) {
+    int factorial = 1;
+    for (int i = 1; i <= num; i++) {
+        factorial *= i;
+    }
+    return factorial;
+}
+int main() {
+    int num;
+    printf("\t\t\t *** Iterative Factorial Function *** \n\n");
+    printf("Enter a non-negative number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        printf("Factorial of %d is %d\n", num, factorialIterative(num));
+    }
+    return 0;
+}
